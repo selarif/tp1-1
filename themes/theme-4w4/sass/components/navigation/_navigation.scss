@@ -1,12 +1,15 @@
 .main-navigation {
 	display: block;
-	width: 100%;
+	width: 100vw;
 
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		background-color: #000055;
+		position: absolute;
+		width: 100%;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -69,20 +72,58 @@
 	}
 }
 
+/*----------------------------------------------
+  Bouton Burger
+------------------------------------------------*/
+.menu-toggle{
+	padding: 0rem;
+	border:0;
+	margin-left: 3rem;
+	transition : transform .20s;
+	transform: rotate(0);
+}
+.main-navigation.toggled {
+	transition: transform 5s;
+}
+.menu-toggle:hover,
+.menu-toggle:focus{
+	background: #f6f7f8;
+}
+.menu-toggle:focus{
+	outline : 1px solid #fff;
+	outline-offset: -4px;
+}
+.menu-toggle:active {
+	transform : scale(0.99);
+}
+
+.main-navigation.toggled .menu-toggle{ // quand le menu est actif
+	transform: rotate(90deg);
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
 
+/*  --------------------------------------------------------
+Version Tablet
+------------------------------------------------------------  */
 @media screen and (min-width: 37.5em) {
 
-	.menu-toggle {
+	.menu-toggle { // on cache le menu quand il est en version tablette
 		display: none;
 	}
 
 	.main-navigation ul {
 		display: flex;
+		height : 2rem;
+		justify-content: space-around; // aligner au centre en x
+		align-items: center;  // aligner au centre en y
+		position: static;
+		width: 100vw;
+		padding-right: 10px;
 	}
 }
 

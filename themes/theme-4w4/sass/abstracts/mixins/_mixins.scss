@@ -1,3 +1,7 @@
+/*
+ MIXINS SERT A NE PAS METTRE DE MEDIA QUERY DIRECTEMENT DANS LA PAGE D'_ACCUEIL.SCSS
+*/
+
 // Center block
 @mixin center-block {
 	display: block;
@@ -5,7 +9,23 @@
 	margin-right: auto;
 }
 
+$desktop__accueil: 800px;
+//$desktop__tablet: 400px;
+
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+$desktop:900px;
+@mixin media-desktop {
+	@media (min-width: $desktop){
+		@content;
+	}
+}
+
+$largeur_desktop :800px;
+@mixin desktop{
+	@media (min-width: $largeur_desktop){
+		@content;
+	}
 }
