@@ -3,27 +3,36 @@
 // ------------------------ */
 $largeur_burger : 2rem;
 $duree : .5s;
-$epaisseur : 5%;
+$epaisseur : 8%;
 
 /* -------------------------------
    Bouton Burger
 ---------------------------------- */
 #burger{
     // le burger est deja centre a cause de body
-    display: block;
+    // display: block;  // il faut enlever display block sinon le burger restera visible sur desktop
     position: relative;
     width: $largeur_burger;
     height: $largeur_burger;
     border: 1px solid #888;
 
+    border-radius:  50%;
+    overflow: hidden;
+
     div{
         position: absolute; // si on a un absolute, il faut un position relative (son parent doit l'etre)
         width: 100%;
         height: 100%;
+
+        top: 0;
+        left: 0;
         &:nth-of-type(1){
-            clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+            //* clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
             //clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%); 
             background-color: rgb(25, 0, 255);
+
+            clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+
         }
         &:nth-of-type(2){
             clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
@@ -31,10 +40,12 @@ $epaisseur : 5%;
             background-color: rgb(0, 153, 255);
         }
         &:nth-of-type(3){
-            clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+            //* clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
             //clip-path : polygon(-5% 95%, 95% -5%, 1055 5%, 5% 105%);
             background-color: rgb(76, 0, 255);
-            z-index: -1;
+            // z-index: -1;
+
+            clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
         }
     }
 }
@@ -44,26 +55,29 @@ $epaisseur : 5%;
   -------------------------------------------------------------- */
 @keyframes ouvrirX1 {
     0%{
-        clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+        //* clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+
+        clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
     }
     100%{
-        clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%);
-        clip-path: polygon(($epaisseur) (-$epaisseur), (100+$epaisseur));
+        //*clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%);
+
+        clip-path: polygon($epaisseur  (-$epaisseur),  100%+$epaisseur 100%-$epaisseur ,100%-$epaisseur 100%+$epaisseur, -$epaisseur $epaisseur);
     }
 }
 
 @keyframes fermeX1 {
     0%{
-        clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+        clip-path: polygon($epaisseur  (-$epaisseur),  100%+$epaisseur 100%-$epaisseur ,100%-$epaisseur 100%+$epaisseur, -$epaisseur $epaisseur);
     }
     100%{
-        clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%);
+        clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
     }
 }
 
 .ouvrirX1{
     animation: ouvrirX1 $duree both;
-    // both sert a garder les deux etats du keyframes (garde backward et forward)
+    // both sert à garder les deux états du keyframes (garde backward et forward)
 }
 .fermeX1{
     animation: fermeX1 $duree both;
@@ -78,13 +92,17 @@ $epaisseur : 5%;
         clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
     }
     100%{
-        clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+       //* clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+
+       clip-path: polygon(48%  48%,  52% 48% , 52% 52%, 48% 52%);
     }
 }
 
 @keyframes fermeX1 {
     0%{
-        clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+        //* clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+
+        clip-path: polygon(48%  48%,  52% 48% , 52% 52%, 48% 52%);
     }
     100%{
         clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
@@ -101,23 +119,33 @@ $epaisseur : 5%;
 
 
 /*--------------------------------------------------------------
-  Animation de la trosiieme barre : bar3
+  Animation de la trosième barre : bar3
   -------------------------------------------------------------- */
   @keyframes ouvrirX3 {
     0%{
-        clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+        //* clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+
+        clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
     }
     100%{
-        clip-path : polygon(-5% 95%, 95% -5%, 1055 5%, 5% 105%);
+        //* clip-path : polygon(-5% 95%, 95% -5%, 1055 5%, 5% 105%);
+
+        clip-path: polygon( (-$epaisseur)  100%-$epaisseur,  100%-$epaisseur (-$epaisseur) , 100%+$epaisseur $epaisseur, $epaisseur 100%+$epaisseur);
+
     }
 }
 
 @keyframes fermeX3 {
     0%{
-        clip-path : polygon(-5% 95%, 95% -5%, 1055 5%, 5% 105%);
+        //* clip-path : polygon(-5% 95%, 95% -5%, 1055 5%, 5% 105%);
+
+        clip-path: polygon(-4%  96%,  96% -4% , 104% 4%, 4% 104%);
+
     }
     100%{
-        clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+        //* clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+
+        clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
     }
 }
 
