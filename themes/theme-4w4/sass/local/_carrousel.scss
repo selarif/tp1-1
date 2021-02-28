@@ -10,7 +10,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-            
+          
+        .icones{
+        // Mes Ajouts
+        color: white;
+        }
+        
+
     
         &:nth-of-type(1){
             background-color: rgb(216, 160, 160);
@@ -22,5 +28,15 @@
             background-color: rgb(228, 213, 148);
         }
 
-    }// fin du div
+    } // fin du div
+}
+
+.bouttons{
+    width: 20vw;
+    display: flex;
+    
+    
+    button{
+        justify-content: space-between;
+    }
 }

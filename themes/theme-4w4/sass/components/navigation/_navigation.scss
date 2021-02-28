@@ -79,16 +79,18 @@
 	padding: 0rem;
 	border:0;
 	margin-left: 3rem;
-	transition : transform .20s;
-	transform: rotate(0);
+				/*  transition : transform .20s;
+					transform: rotate(0);*/
 }
 .main-navigation.toggled {
 	transition: transform 5s;
 }
+/*
 .menu-toggle:hover,
 .menu-toggle:focus{
 	background: #f6f7f8;
 }
+*/
 .menu-toggle:focus{
 	outline : 1px solid #fff;
 	outline-offset: -4px;
@@ -97,9 +99,9 @@
 	transform : scale(0.99);
 }
 
-.main-navigation.toggled .menu-toggle{ // quand le menu est actif
+/*.main-navigation.toggled .menu-toggle{ // quand le menu est actif
 	transform: rotate(90deg);
-}
+}*/
 
 /* Small menu. */
 .menu-toggle,

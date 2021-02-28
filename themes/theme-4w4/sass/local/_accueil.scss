@@ -4,6 +4,12 @@ body.home {
 
     width : 100vw;
     height : 100vh;
+
+    // #primary est la section principale
+    #primary{
+        margin-left: 0;
+        width: 100vw;
+    }
 }
 
 body.home::after{
