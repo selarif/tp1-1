@@ -4,6 +4,7 @@ body.home {
 
     width : 100vw;
     height : 100vh;
+    background-color: rgb(112, 112, 190);
 
     // #primary est la section principale
     #primary{
@@ -38,6 +39,7 @@ body.home::after{
 }
 .entry-title{
     font-size: (.4em, #{"-0.875rem + 8.333vw"}, 3rem);
+    padding-left: 2rem;
 }
 
 .accueil{

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: theme-4w4
 Theme URI: http://underscores.me/
@@ -41,8 +42,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Media
 	- Captions
 	- Galleries
-# plugins
-	- Jetpack infinite scroll
+
 # Utilities
 	- Accessibility
 	- Alignments
@@ -757,19 +757,17 @@ body {
   padding: 0rem;
   border: 0;
   margin-left: 3rem;
-  transition: transform .20s;
-  transform: rotate(0);
+  background-color: #fff;
+  /*  transition : transform .20s;
+					transform: rotate(0);*/
 }
 
-.main-navigation.toggled {
-  transition: transform 5s;
-}
-
+/*
 .menu-toggle:hover,
-.menu-toggle:focus {
-  background: #f6f7f8;
+.menu-toggle:focus{
+	background: #f6f7f8;
 }
-
+*/
 .menu-toggle:focus {
   outline: 1px solid #fff;
   outline-offset: -4px;
@@ -779,10 +777,9 @@ body {
   transform: scale(0.99);
 }
 
-.main-navigation.toggled .menu-toggle {
-  transform: rotate(90deg);
-}
-
+/*.main-navigation.toggled .menu-toggle{ // quand le menu est actif
+	transform: rotate(90deg);
+}*/
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -968,19 +965,6 @@ Version Tablet
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
-/* Jetpack infinite scroll
---------------------------------------------- */
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  display: none;
-}
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-  display: block;
-}
-
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
@@ -1056,6 +1040,7 @@ Version Tablet
 body.home {
   width: 100vw;
   height: 100vh;
+  background-color: #7070be;
 }
 
 body.home #primary {
@@ -1090,6 +1075,7 @@ body.home::after {
 
 .entry-title {
   font-size: 0.4em, -0.875rem + 8.333vw, 3rem;
+  padding-left: 2rem;
 }
 
 .accueil {
@@ -1141,6 +1127,7 @@ body.home::after {
   width: 300vw;
   height: 20vh;
   transition: transform .5s;
+  border: 3px solid red;
 }
 
 .carrousel div {
@@ -1181,54 +1168,52 @@ body.home::after {
    Bouton Burger
 ---------------------------------- */
 #burger {
-  display: block;
   position: relative;
   width: 2rem;
   height: 2rem;
   border: 1px solid #888;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 #burger div {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
 }
 
 #burger div:nth-of-type(1) {
-  clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
   background-color: #1900ff;
 }
 
 #burger div:nth-of-type(2) {
-  clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
   background-color: #0099ff;
 }
 
 #burger div:nth-of-type(3) {
-  clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
   background-color: #4c00ff;
-  z-index: -1;
 }
 
 /*--------------------------------------------------------------
-  Animation de la premiere barre : bar1
+  Animation de la Première barre : bar1
   -------------------------------------------------------------- */
 @keyframes ouvrirX1 {
   0% {
-    clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
   }
   100% {
-    clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%);
-    clip-path: polygon(5% -5%, 105%);
+    clip-path: polygon(8% -8%, 108% 92%, 92% 108%, -8% 8%);
   }
 }
 
 @keyframes fermeX1 {
   0% {
-    clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+    clip-path: polygon(8% -8%, 108% 92%, 92% 108%, -8% 8%);
   }
   100% {
-    clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%);
+    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
   }
 }
 
@@ -1241,7 +1226,7 @@ body.home::after {
 }
 
 /*--------------------------------------------------------------
-  Animation de la deuxieme barre : bar2
+  Animation de la Deuxième barre : bar2
   -------------------------------------------------------------- */
 @keyframes ouvrirX2 {
   0% {
@@ -1252,7 +1237,7 @@ body.home::after {
   }
 }
 
-@keyframes fermeX1 {
+@keyframes fermeX2 {
   0% {
     clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
   }
@@ -1270,20 +1255,20 @@ body.home::after {
 }
 
 /*--------------------------------------------------------------
-  Animation de la trosiieme barre : bar3
+  Animation de la Trosième barre : bar3
   -------------------------------------------------------------- */
 @keyframes ouvrirX3 {
   0% {
     clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
   }
   100% {
-    clip-path: polygon(-5% 95%, 95% -5%, 1055 5%, 5% 105%);
+    clip-path: polygon(-5% 95%, 95% -5%, 105% 5%, 5% 105%);
   }
 }
 
 @keyframes fermeX3 {
   0% {
-    clip-path: polygon(-5% 95%, 95% -5%, 1055 5%, 5% 105%);
+    clip-path: polygon(-5% 95%, 95% -5%, 105% 5%, 5% 105%);
   }
   100% {
     clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
