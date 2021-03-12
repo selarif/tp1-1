@@ -710,7 +710,7 @@ body {
   padding-left: 0;
   background-color: #000055;
   position: absolute;
-  width: 100%;
+  width: 100vw;
 }
 
 .main-navigation ul ul {
@@ -794,6 +794,7 @@ Version Tablet
   .menu-toggle {
     display: none;
   }
+  .main-navigation.toggled ul,
   .main-navigation ul {
     display: flex;
     height: 2rem;
@@ -803,6 +804,23 @@ Version Tablet
     width: 100vw;
     padding-right: 10px;
   }
+  .main-navigation.toggled ul ul,
+  .main-navigation ul ul {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    display: flex;
+  }
+  /*.main-navigation.toggled ul,
+	.main-navigation ul {
+		ul{
+			position: absolute;
+			width: 200px;
+			height: 300px;
+			display: flex;
+
+		}
+	}*/
 }
 
 .site-main .comment-navigation, .site-main

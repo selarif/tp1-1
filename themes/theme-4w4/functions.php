@@ -199,3 +199,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+function extraire_cours($query){
+	if ($query->is_category('cours')){
+		$query->set('posts_per_page', -1); 
+		$query->set('orderby', 'title'); 
+		$query->set('order', 'asc'); 
+	}
+}
+// ---Add action sert a ecouter les hooks. Un crochet qui se trouve a l'interieur de word press. Des qu'il en trouve un, il s'actif. 
+// ---Il sert a adapter la function de wordpress, en fonction de ou wp est rendu dans l'execution de son code
+// ---pre get post = avant d'extraire les articles
+add_action('pre_get_posts','extraire_cours');
