@@ -51,7 +51,7 @@
 
 		<section class="carrousel">
 		<!--	<div>1</div>
-				<div>2</div>
+				<div>2</div> 
 				<div>3</div>	
 		-->
 		<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"></div>

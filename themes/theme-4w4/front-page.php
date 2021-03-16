@@ -15,31 +15,44 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+				
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
+			
 			</header><!-- .page-header -->
+			<section class="list-cours">
+				<?php
+				/* Start the Loop */
+				$precedent = "XXXXXXX"
+				while ( have_posts() ) :
+					the_post(); // contient l'enregistrement qui a ete extrait.
+					$titre_grand = get_the_title();
+					$session = substr($titre_grand, 4,1); // 4 : position du numero. 1 : nombre de caracteres
+					$nbHeure = substr($titre_grand, -4, 3 ); // on cherche le nombre d'heures
+					$titre = substr($titre_grand, 8, -6); // on cherche le nom du cours et seulement ca, sans le sigle et nb d'heures
+					$sigle = substr($titre_grand, 0, 7);
+					$typeCours = get_field('type_de_cours'); 
+					// a chaque fois que le precedent est different du cours present, creer une nouvelle section
+					if($precedent != $typeCours): ?>
+					 <?php if($precedent != "XXXXXXX"): ?>
+						<section>";
+					 <?php endif ?>
+					 <h2><?php echo $typeCours?></h2>
+					</section>
+					<?php= endif ?>
+					<article>
+						<p><?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?></p>
+						<a href="<?php echo get_permalink();?>"><?php echo $titre; ?></a>
+						<p>Session : <?php echo $session; ?></p>
+					</article>
+				<?php 
+				$precedent = $typeCours;
+				endwhile; ?>
+			</section>
+		<?php endif;  ?>
 
-			<?php
-			/* Start the Loop */
-            $precedent = 0;
-			while ( have_posts() ) :
-				the_post();
-                $titre = get_the_title();
-                $session = substr($titre, 4,1);
-                if ($precedent != $session){
-                    // ---sert a montrer tout les titres
-                    echo '<p> <h3>Session : ' . $session . '</h3> </p>' ;
-                }
-
-                // ---sert a montrer tout les titres
-                echo '<p>' . $session . ' ' . $titre . '</p>' ;
-                // ---precedent est toujours en retard d'une boucle 
-                $precedent = $session;
-			endwhile;
-		endif;  
-		?>
 
 	</main><!-- #main -->
 

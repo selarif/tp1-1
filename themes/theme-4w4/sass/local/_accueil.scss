@@ -42,17 +42,46 @@ body.home::after{
     padding-left: 2rem;
 }
 
+/*
 .accueil{
     font-size: (.8em, #{"-0.875rem + 8.333vw"}, 2rem);
     ul{
         list-style-type: none;
     }
-    /*a { text-decoration: none; }*/
+    /*a { text-decoration: none; }
     img{
         display: block;
         border-radius: 200px;
         width: 70%;
     }
+}
+*/
+.list-cours{
+    display: flex;
+    flex-direction: column;
+
+    section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+            p{
+                font-size: .7rem;
+                font-weight: bold;
+            }
+            a{
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        } // fin article
+    } // fin section    
 }
 
 .site-title{
