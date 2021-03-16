@@ -1,0 +1,173 @@
+.main-navigation {
+	display: block;
+	width: 100vw;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		background-color: #000055;
+		position: absolute;
+		width: 100vw;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/*----------------------------------------------
+  Bouton Burger
+------------------------------------------------*/
+.menu-toggle{
+	padding: 0rem;
+	border:0;
+	margin-left: 3rem;
+	background-color: #fff;
+				/*  transition : transform .20s;
+					transform: rotate(0);*/
+
+}
+.main-navigation.toggled {
+	//transition: transform 5s;
+}
+/*
+.menu-toggle:hover,
+.menu-toggle:focus{
+	background: #f6f7f8;
+}
+*/
+.menu-toggle:focus{
+	outline : 1px solid #fff;
+	outline-offset: -4px;
+}
+.menu-toggle:active {
+	transform : scale(0.99);
+}
+
+/*.main-navigation.toggled .menu-toggle{ // quand le menu est actif
+	transform: rotate(90deg);
+}*/
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+/*  --------------------------------------------------------
+Version Tablet
+------------------------------------------------------------  */
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle { // on cache le menu quand il est en version tablette
+		display: none;
+	}
+
+	.main-navigation.toggled ul,
+	.main-navigation ul {
+		display: flex;
+		height : 2rem;
+		justify-content: space-around; // aligner au centre en x
+		align-items: center;  // aligner au centre en y
+		position: static;
+		width: 100vw;
+		padding-right: 10px;
+
+		ul{
+			position: absolute;
+			width: 200px;
+			height: 300px;
+			display: flex;
+		}
+	}
+
+	/*.main-navigation.toggled ul,
+	.main-navigation ul {
+		ul{
+			position: absolute;
+			width: 200px;
+			height: 300px;
+			display: flex;
+
+		}
+	}*/
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}

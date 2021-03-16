@@ -1,68 +1,73 @@
 .main-navigation {
 	display: block;
 	width: 100vw;
+	
 
 	ul {
 		display: none;
+		position : absolute;
+		width : 100%;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background-color: #000055;
-		position: absolute;
-		width: 100vw;
-
+		background-color: #000;
+		text-align: left;
+		left: 0;
+	
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			// float: left;
 			position: absolute;
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
 			a {
-				width: 200px;
+				width: 100%;
+				padding-left: 15px;
 			}
 
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
+		} /* ---sub-menu */
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			left: 0;
+		    // ---cela fait apparaitre le sous menu
+		} 
+
+		// on cherche le a qui est dans le li, et on ajoute un +
+		li > a[href="#"]::after {
+			content: "+";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 90%; // se tasse vers la droite de 90%
+			right : 0;
 		}
-	}
+		li.focus > a[href="#"]::after,
+		li > a[href="#"]:hover::after{
+			content : "-";
+		}
+
+
+	} // ---nav-menu (ul-principal)
 
 	li {
 		position: relative;
+	    flex : 1;
 
-		&:hover > a,
+	 	&:hover > a,
 		&.focus > a {
 		}
+	
+
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		padding: .5rem;
 	}
 
 	.current_page_item > a,
@@ -70,85 +75,75 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 	}
+} // ---fin de .main-navigation
+/* -----------------------------------------------------------------------------
+Bouton burger 
+------------------------------------------------------------------------------*/
+.menu-toggle {
+	padding :0;
+//	transition : transform .25s;
+//	transform : rotate(0deg);
+	border : 0;
 }
-
-/*----------------------------------------------
-  Bouton Burger
-------------------------------------------------*/
-.menu-toggle{
-	padding: 0rem;
-	border:0;
-	margin-left: 3rem;
-	background-color: #fff;
-				/*  transition : transform .20s;
-					transform: rotate(0);*/
-
-}
-.main-navigation.toggled {
-	//transition: transform 5s;
-}
-/*
 .menu-toggle:hover,
-.menu-toggle:focus{
-	background: #f6f7f8;
+.menu-toggle:focus {
+    background: #fafbfc;
+}
+
+.menu-toggle:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.menu-toggle:active {
+    transform: scale(0.99);
+}
+
+/*
+.main-navigation.toggled .menu-toggle{
+	transform : rotate(90deg);
 }
 */
-.menu-toggle:focus{
-	outline : 1px solid #fff;
-	outline-offset: -4px;
-}
-.menu-toggle:active {
-	transform : scale(0.99);
-}
 
-/*.main-navigation.toggled .menu-toggle{ // quand le menu est actif
-	transform: rotate(90deg);
-}*/
-
-/* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	// ---cela rend le menu visible
 }
-
-/*  --------------------------------------------------------
-Version Tablet
-------------------------------------------------------------  */
+/* ---------------------------------------------------------------------------
+menu tablet
+------------------------------------------------------------------------------ */
 @media screen and (min-width: 37.5em) {
 
-	.menu-toggle { // on cache le menu quand il est en version tablette
+	.menu-toggle {
 		display: none;
 	}
-
 	.main-navigation.toggled ul,
 	.main-navigation ul {
 		display: flex;
-		height : 2rem;
-		justify-content: space-around; // aligner au centre en x
-		align-items: center;  // aligner au centre en y
-		position: static;
-		width: 100vw;
-		padding-right: 10px;
-
-		ul{
+		position : static;
+		justify-content: space-around;
+		a[href="#"]::after { // pour cacher les + et - en version desktop
+			display:none;
+			
+		}
+		li:hover ul{
+			display: block; // ---pour afficher le sous menu quand on le veut en hover
 			position: absolute;
-			width: 200px;
-			height: 300px;
-			display: flex;
+			width: 300px;
+			height: 500px;  // !! 14h05, Semaine 6 cours 2
+		}
+		ul {
+			display: none;
+			// ---cache le sous menu pour qu'il ne soit pas affiche de facon permanente et plutot seulement quand on le veut
 		}
 	}
-
-	/*.main-navigation.toggled ul,
-	.main-navigation ul {
-		ul{
-			position: absolute;
-			width: 200px;
-			height: 300px;
-			display: flex;
-
-		}
-	}*/
 }
+
+
+
+/* ----------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------- */
 
 .comment-navigation,
 .posts-navigation,
