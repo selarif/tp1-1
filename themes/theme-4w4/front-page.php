@@ -25,7 +25,7 @@ get_header();
 			<section class="list-cours">
 				<?php
 				/* Start the Loop */
-				$precedent = "XXXXXXX"
+				$precedent = "XXXXXXX";
 				while ( have_posts() ) :
 					the_post(); // contient l'enregistrement qui a ete extrait.
 					$titre_grand = get_the_title();
@@ -40,8 +40,8 @@ get_header();
 						<section>";
 					 <?php endif ?>
 					 <h2><?php echo $typeCours?></h2>
-					</section>
-					<?php= endif ?>
+						</section>
+					<?php endif ?>
 					<article>
 						<p><?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?></p>
 						<a href="<?php echo get_permalink();?>"><?php echo $titre; ?></a>
