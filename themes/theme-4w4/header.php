@@ -45,28 +45,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-	<!-- ** Debut du carrousel -->
-	<?php 
-	if ( is_front_page() /*&& is_home()*/ ) : ?>
-
-		<section class="carrousel">
-		<!--	<div>1</div>
-				<div>2</div> 
-				<div>3</div>	
-		-->
-		<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"></div>
-		<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"></div>
-		<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=location-marker&color=fff" width="32" height="32"></div>
-		</section>
-		<div class="bouttons">
-			<button id="un">1</button>
-			<button id="deux">2</button>
-			<button id="trois">3</button>
-		</div>
-			
-
-	<?php endif ?> 		
-	<!-- ** Fin du carrousel -->	
+		
 
 	<!-- <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=8f5da8" width="32" height="32"> -->
 		<nav id="site-navigation" class="main-navigation">
