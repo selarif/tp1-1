@@ -10,7 +10,7 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background-color: #000;
+		background-color: #721817;
 		text-align: left;
 		left: 0;
 	
@@ -32,7 +32,8 @@
 		li.focus > ul {
 			left: 0;
 		    // ---cela fait apparaitre le sous menu
-		} 
+			
+		}
 
 		// on cherche le a qui est dans le li, et on ajoute un +
 		li > a[href="#"]::after {
@@ -67,7 +68,14 @@
 	a {
 		display: block;
 		text-decoration: none;
-		padding: .5rem;
+		padding: .8rem;
+		transition: all 0.5s;
+		text-align: center;
+		
+	}
+
+	a:hover {
+		background-color: #380f0e;
 	}
 
 	.current_page_item > a,
@@ -130,8 +138,9 @@ menu tablet
 		li:hover ul{
 			display: block; // ---pour afficher le sous menu quand on le veut en hover
 			position: absolute;
-			width: 300px;
-			height: 500px;  // !! 14h05, Semaine 6 cours 2
+			width: 240px;
+			height: 450px;  // !! 14h05, Semaine 6 cours 2
+			border-radius: 0 0 50px 50px;
 		}
 		ul {
 			display: none;
