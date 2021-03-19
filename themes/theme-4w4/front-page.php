@@ -17,8 +17,7 @@ get_header();
 			<header class="page-header">
 
 		 <!-- ** Debut du carrousel -->
-			<?php 
-				if ( is_front_page() /*&& is_home()*/ ) : ?>
+			
 
 				<section class="carrousel">
 					<!--	<div>1</div>
@@ -36,7 +35,7 @@ get_header();
 				</div>
 			
 
-		<?php endif ?> 		
+			
 	<!-- ** Fin du carrousel -->
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
