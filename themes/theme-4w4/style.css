@@ -1136,6 +1136,7 @@ body.home::after {
   justify-content: space-between;
   align-items: center;
   width: 30%;
+  border: 1px solid #aaa;
 }
 
 .list-cours section article p {

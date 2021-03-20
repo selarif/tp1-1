@@ -16,9 +16,7 @@ get_header();
 
 			<header class="page-header">
 
-		 <!-- ** Debut du carrousel -->
-			
-
+		 <!-- ** Début du carrousel -->
 				<section class="carrousel">
 					<!--	<div>1</div>
 							<div>2</div> 
@@ -34,8 +32,6 @@ get_header();
 					<button id="trois">3</button>
 				</div>
 			
-
-			
 	<!-- ** Fin du carrousel -->
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -48,26 +44,27 @@ get_header();
 				/* Start the Loop */
 				$precedent = "XXXXXXX";
 				while ( have_posts() ) :
-					the_post(); // ---contient l'enregistrement qui a ete extrait.
+					the_post(); // ---contient l'enregistrement qui a été extrait.
 					$titre_grand = get_the_title();
-					$session = substr($titre_grand, 4,1); // ---4 : position du numero. 1 : nombre de caracteres
+					$session = substr($titre_grand, 4,1); // ---4 : position du numéro. 1 : nombre de caractères
 					$nbHeure = substr($titre_grand, -4, 3 ); // ---on cherche le nombre d'heures
-					$titre = substr($titre_grand, 8, -6); // ---on cherche le nom du cours et seulement ca, sans le sigle et nb d'heures
+					$titre = substr($titre_grand, 8, -6); // ---on cherche le nom du cours et seulement ça, sans le sigle et nb d'heures
 					$sigle = substr($titre_grand, 0, 7);
 					$typeCours = get_field('type_de_cours'); 
-					// ---a chaque fois que le precedent est different du cours present, creer une nouvelle section
+					// ---à chaque fois que le précédent est différent du cours présent, créer une nouvelle section
 					if($precedent != $typeCours): ?>
 					 <?php if($precedent != "XXXXXXX"): ?>
-						<section>";
+						<section>
 					 <?php endif ?>
 					 <h2><?php echo $typeCours?></h2>
-						</section>
-					<?php endif ?>
-					<article>
+					 <article>
 						<p><?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?></p>
 						<a href="<?php echo get_permalink();?>"><?php echo $titre; ?></a>
-						<p>Session : <?php echo $session; ?></p>
+						<p> <h4> Session : </h4> <?php echo $session; ?></p>
 					</article>
+						</section>
+					<?php endif ?>
+					
 				<?php 
 				$precedent = $typeCours;
 				endwhile; ?>
