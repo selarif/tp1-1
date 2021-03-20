@@ -141,6 +141,11 @@ menu tablet
 			width: 240px;
 			height: 450px;  // !! 14h05, Semaine 6 cours 2
 			border-radius: 0 0 50px 50px;
+
+			// Animation
+			animation-name: height;
+    		animation-duration: 2s;
+			animation-timing-function: ease-in-out;
 		}
 		ul {
 			display: none;
@@ -148,6 +153,21 @@ menu tablet
 		}
 	}
 }
+/* ----------------------------------------------------------------------------------------------
+   LES ANIMATIONS
+------------------------------------------------------------------------------------------------- */
+
+@keyframes height{
+    0%{
+        height: 0px;
+        border-radius: 0 0 0 0;    
+	
+    }
+    100%{
+        height: 450px;
+    }
+}
+
 
 
 
@@ -178,22 +198,3 @@ menu tablet
 	
 }
 
-/* ----------------------------------------------------------------------------------------------
-   LES ANIMATIONS
-------------------------------------------------------------------------------------------------- */
-// L'animation du titre Archives 
-@keyframes slider{
-    0%{
-        transform: translateX(-100%);
-        animation-timing-function: cubic-bezier(0,1.04,.72,1.01); 
-    }
-    30%,70%{ 
-        transform: translateX(0px);
-        animation-timing-function: cubic-bezier(1,0,1,.81);
-    }
-    100%{
-        transform: translateX(100%);
-        
-    }
-    
-}

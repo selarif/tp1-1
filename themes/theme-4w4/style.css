@@ -822,10 +822,26 @@ menu tablet
     width: 240px;
     height: 450px;
     border-radius: 0 0 50px 50px;
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
   }
   .main-navigation.toggled ul ul,
   .main-navigation ul ul {
     display: none;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------
+   LES ANIMATIONS
+------------------------------------------------------------------------------------------------- */
+@keyframes height {
+  0% {
+    height: 0px;
+    border-radius: 0 0 0 0;
+  }
+  100% {
+    height: 450px;
   }
 }
 
@@ -854,23 +870,6 @@ menu tablet
 .post-navigation .nav-next {
   text-align: end;
   flex: 1 0 50%;
-}
-
-/* ----------------------------------------------------------------------------------------------
-   LES ANIMATIONS
-------------------------------------------------------------------------------------------------- */
-@keyframes slider {
-  0% {
-    transform: translateX(-100%);
-    animation-timing-function: cubic-bezier(0, 1.04, 0.72, 1.01);
-  }
-  30%, 70% {
-    transform: translateX(0px);
-    animation-timing-function: cubic-bezier(1, 0, 1, 0.81);
-  }
-  100% {
-    transform: translateX(100%);
-  }
 }
 
 /* Posts and pages
@@ -1102,7 +1101,7 @@ body.home::after {
   left: 0;
   right: 0;
   clip-path: polygon(100% 46%, 50% 100%, 100% 100%);
-  background-color: #80168a;
+  background-color: #153B50;
   z-index: -1;
 }
 
@@ -1121,6 +1120,7 @@ body.home::after {
   text-align: center;
   font-size: 4rem;
   color: #153B50;
+  z-index: -5;
   animation-name: slider;
   animation-duration: 5s;
   animation-iteration-count: infinite;

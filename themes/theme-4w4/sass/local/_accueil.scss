@@ -25,7 +25,7 @@ body.home::after{
     right:0;
     clip-path: polygon(100% 46%, 50% 100%, 100% 100%);
     // clip-path: polygon(90% 100% , 100% 100% , 70% 100%);
-    background-color: rgb(128, 22, 138);
+    background-color: #153B50;
     z-index: -1;
 
     @include desktop{
@@ -37,10 +37,11 @@ body.home::after{
     margin: 0;
     padding: 0;
 }
-.page-title{
+.page-title{ // TITRE ARCHIVES
     text-align: center;
     font-size: 4rem;
     color: #153B50;
+    z-index: -5;
     // L'animation
     animation-name: slider;
     animation-duration: 5s;
@@ -83,7 +84,7 @@ body.home::after{
         flex-wrap: wrap;
         justify-content: center;
     
-        article:hover{
+        article:hover{ // Quand on hover sur les cases de cours
             background-color: #f5e6e2;
             color: #426A5A;
             box-shadow: none;
@@ -120,8 +121,8 @@ body.home::after{
                 text-shadow: 4px 4px 12px rgba(0,0,0,0.45);
 
             }
-            h4{
-                color: #153B50
+            h4{ 
+                color: #153B50;
             }
         } // fin article
     } // fin section    
@@ -134,8 +135,6 @@ body.home::after{
             justify-content: center;
             article { 
                 width: 30%;
-                p{}
-                a{}
             } // fin article
         } // fin section    
     }
