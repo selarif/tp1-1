@@ -67,7 +67,7 @@ get_header();
 				$precedent = $typeCours;
 				endwhile; ?>
 			</section>
-		<?php endif;  ?>
+		<?php endif;  //fin have_posts?>
 
 
 	</main><!-- #main -->

@@ -1100,6 +1100,12 @@ body.home::after {
   padding: 0;
 }
 
+.page-title {
+  text-align: center;
+  font-size: 4rem;
+  color: #153B50;
+}
+
 .entry-title {
   font-size: 0.4em, -0.875rem + 8.333vw, 3rem;
   padding-left: 2rem;
@@ -1119,15 +1125,31 @@ body.home::after {
     }
 }
 */
+/* ---------------------------------
+    LA LISTE DES COURS EN CASES
+------------------------------------ */
 .list-cours {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .list-cours section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-cours section article:hover {
+  background-color: #f5e6e2;
+  color: #426A5A;
+}
+
+.list-cours section article:hover a, .list-cours section article:hover h4 {
+  color: #426A5A;
 }
 
 .list-cours section article {
@@ -1135,19 +1157,43 @@ body.home::after {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
-  border: 1px solid #aaa;
+  width: 90%;
+  background-color: #426A5A;
+  border-radius: 40px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 20px;
+  box-shadow: -1px 32px 50px -32px rgba(0, 0, 0, 0.75);
+  transition: 0.5s all ease-in-out;
 }
 
 .list-cours section article p {
   font-size: .7rem;
   font-weight: bold;
+  padding-top: 20px;
 }
 
 .list-cours section article a {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  color: #BAD1CD;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+.list-cours section article h4 {
+  color: #153B50;
+}
+
+@media screen and (min-width: 37.5em) {
+  .list-cours section {
+    justify-content: center;
+  }
+  .list-cours section article {
+    width: 30%;
+  }
 }
 
 .site-title {

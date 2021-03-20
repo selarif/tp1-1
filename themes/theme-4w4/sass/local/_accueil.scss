@@ -37,6 +37,11 @@ body.home::after{
     margin: 0;
     padding: 0;
 }
+.page-title{
+    text-align: center;
+    font-size: 4rem;
+    color: #153B50;
+}
 .entry-title{
     font-size: (.4em, #{"-0.875rem + 8.333vw"}, 3rem);
     padding-left: 2rem;
@@ -56,34 +61,78 @@ body.home::after{
     }
 }
 */
+
+/* ---------------------------------
+    LA LISTE DES COURS EN CASES
+------------------------------------ */
 .list-cours{
     // Mobile First
     display: flex;
-    flex-direction: column;
+    flex-direction: column; // de haut en bas
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 
     section{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
     
+        article:hover{
+            background-color: #f5e6e2;
+            color: #426A5A;
+            a,h4{
+                color: #426A5A;
+            }
+        }
         article {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
-            width: 30%;
-            border: 1px solid #aaa;
+            align-items: center; // aligner le contenu des cases au centre 
+            width: 90%;
+            background-color: #426A5A;
+            border-radius : 40px;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-bottom: 20px;
+            box-shadow: -1px 32px 50px -32px rgba(0,0,0,0.75);
+            transition: 0.5s all ease-in-out;
             p{
                 font-size: .7rem;
                 font-weight: bold;
+                padding-top: 20px;
             }
-            a{
-                font-size: 1.5rem;
+            a{ // Titres des cours
+                font-size: 2rem;
                 font-weight: bold;
                 text-decoration: none;
+                text-align: center;
+                padding: 10px;
+                color : #BAD1CD;
+                text-shadow: 4px 4px 12px rgba(0,0,0,0.45);
+
+            }
+            h4{
+                color: #153B50
             }
         } // fin article
     } // fin section    
+}
+// *En Format Desktop*
+@media screen and (min-width: 37.5em) {
+    .list-cours{
+    
+        section{
+            justify-content: center;
+            article { 
+                width: 30%;
+                p{}
+                a{}
+            } // fin article
+        } // fin section    
+    }
 }
 
 .site-title{
