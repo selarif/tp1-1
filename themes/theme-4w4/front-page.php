@@ -26,11 +26,29 @@ get_header();
 					<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"></div>
 					<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=location-marker&color=fff" width="32" height="32"></div>
 				</section>
+		<!--
 				<div class="bouttons">
 					<button id="un">1</button>
 					<button id="deux">2</button>
 					<button id="trois">3</button>
 				</div>
+		-->
+
+				<label class="LesBouttons">
+					<div id="un">
+						<input type="radio" checked="checked" name="radio">
+						<span class="checkmark"></span>
+					</div>
+					<div id="deux">
+						<input type="radio" name="radio">
+						<span class="checkmark"></span>
+					</div>
+					<div id="trois">
+						<input type="radio" name="radio">
+						<span class="checkmark"></span>
+					</div>
+					
+				</label>
 			
 	<!-- ** Fin du carrousel -->
 				<?php

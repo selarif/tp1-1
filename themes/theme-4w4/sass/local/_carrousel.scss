@@ -32,12 +32,13 @@
     } // fin du div
 }
 
-.bouttons{
-    width: 20vw;
+.LesBouttons{
+    width: 30vw;
     display: flex;
     
     
     button{
+        display: flex;
         justify-content: space-between;
     }
 }

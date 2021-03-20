@@ -1295,12 +1295,13 @@ body.home::after {
   background-color: #e4d594;
 }
 
-.bouttons {
-  width: 20vw;
+.LesBouttons {
+  width: 30vw;
   display: flex;
 }
 
-.bouttons button {
+.LesBouttons button {
+  display: flex;
   justify-content: space-between;
 }
 
