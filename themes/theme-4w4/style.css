@@ -856,6 +856,23 @@ menu tablet
   flex: 1 0 50%;
 }
 
+/* ----------------------------------------------------------------------------------------------
+   LES ANIMATIONS
+------------------------------------------------------------------------------------------------- */
+@keyframes slider {
+  0% {
+    transform: translateX(-100%);
+    animation-timing-function: cubic-bezier(0, 1.04, 0.72, 1.01);
+  }
+  30%, 70% {
+    transform: translateX(0px);
+    animation-timing-function: cubic-bezier(1, 0, 1, 0.81);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -1104,6 +1121,9 @@ body.home::after {
   text-align: center;
   font-size: 4rem;
   color: #153B50;
+  animation-name: slider;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .entry-title {
@@ -1146,10 +1166,12 @@ body.home::after {
 .list-cours section article:hover {
   background-color: #f5e6e2;
   color: #426A5A;
+  box-shadow: none;
 }
 
 .list-cours section article:hover a, .list-cours section article:hover h4 {
-  color: #426A5A;
+  color: #eec2b7;
+  text-shadow: none;
 }
 
 .list-cours section article {
@@ -1221,6 +1243,23 @@ body.home::after {
   font-weight: normal;
   color: #003;
   margin-top: 0;
+}
+
+/* ----------------------------------------------------------------------------------------------
+   LES ANIMATIONS
+------------------------------------------------------------------------------------------------- */
+@keyframes slider {
+  0% {
+    transform: translateX(-100%);
+    animation-timing-function: cubic-bezier(0, 1.04, 0.72, 1.01);
+  }
+  30%, 70% {
+    transform: translateX(0px);
+    animation-timing-function: cubic-bezier(1, 0, 1, 0.81);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Local/carrousel

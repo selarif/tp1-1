@@ -174,4 +174,26 @@ menu tablet
 		text-align: end;
 		flex: 1 0 50%;
 	}
+
+	
+}
+
+/* ----------------------------------------------------------------------------------------------
+   LES ANIMATIONS
+------------------------------------------------------------------------------------------------- */
+// L'animation du titre Archives 
+@keyframes slider{
+    0%{
+        transform: translateX(-100%);
+        animation-timing-function: cubic-bezier(0,1.04,.72,1.01); 
+    }
+    30%,70%{ 
+        transform: translateX(0px);
+        animation-timing-function: cubic-bezier(1,0,1,.81);
+    }
+    100%{
+        transform: translateX(100%);
+        
+    }
+    
 }
