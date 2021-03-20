@@ -53,18 +53,16 @@ get_header();
 					$typeCours = get_field('type_de_cours'); 
 					// ---à chaque fois que le précédent est différent du cours présent, créer une nouvelle section
 					if($precedent != $typeCours): ?>
-					 <?php if($precedent != "XXXXXXX"): ?>
-						<section>
+					 <?php if ($precedent != "XXXXXXX"): // ---Quand $precedent n'est pas comme en premier (XXXXXX), alors restart la boucle pour les autres blocs (specifique, web,jeu, etc)?>
+			</section>
 					 <?php endif ?>
-					 <h2><?php echo $typeCours?></h2>
-					 <article>
-						<p><?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?></p>
-						<a href="<?php echo get_permalink();?>"><?php echo $titre; ?></a>
-						<p> <h4> Session : </h4> <?php echo $session; ?></p>
-					</article>
-						</section>
+						<section>
 					<?php endif ?>
-					
+						<article>
+							<p><?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?></p>
+							<a href="<?php echo get_permalink();?>"><?php echo $titre; ?></a>
+							<p> <h4> Session : </h4> <?php echo $session; ?></p>
+						</article>
 				<?php 
 				$precedent = $typeCours;
 				endwhile; ?>
