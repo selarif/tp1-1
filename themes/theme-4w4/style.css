@@ -1122,8 +1122,8 @@ body.home::after {
   color: #153B50;
   z-index: -5;
   animation-name: slider;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
 }
 
 .entry-title {
@@ -1253,12 +1253,10 @@ body.home::after {
     transform: translateX(-100%);
     animation-timing-function: cubic-bezier(0, 1.04, 0.72, 1.01);
   }
-  30%, 70% {
+  100% {
     transform: translateX(0px);
     animation-timing-function: cubic-bezier(1, 0, 1, 0.81);
-  }
-  100% {
-    transform: translateX(100%);
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.45);
   }
 }
 
