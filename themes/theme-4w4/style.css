@@ -1295,14 +1295,35 @@ body.home::after {
   background-color: #e4d594;
 }
 
-.LesBouttons {
-  width: 30vw;
-  display: flex;
+.LesBouttons input {
+  opacity: 0;
+  cursor: pointer;
 }
 
-.LesBouttons button {
+.checkmark {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #BAD1CD;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.checkmark:hover {
+  background-color: #153B50;
+}
+
+.LesBouttons {
+  width: 100vw;
+  height: 5vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  background-color: #815355;
+}
+
+.LesBouttons div {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* Local/burger

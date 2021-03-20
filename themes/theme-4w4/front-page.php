@@ -26,6 +26,7 @@ get_header();
 					<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"></div>
 					<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=location-marker&color=fff" width="32" height="32"></div>
 				</section>
+		 <!-- ** Fin du carrousel -->		
 		<!--
 				<div class="bouttons">
 					<button id="un">1</button>
@@ -50,7 +51,7 @@ get_header();
 					
 				</label>
 			
-	<!-- ** Fin du carrousel -->
+	
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );

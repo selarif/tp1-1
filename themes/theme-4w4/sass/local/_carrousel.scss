@@ -31,14 +31,34 @@
 
     } // fin du div
 }
+//Pour cacher le Bouton radio par defaut
+.LesBouttons input{
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark{
+    
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #BAD1CD;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.checkmark:hover{
+    background-color: #153B50;
+}
 
 .LesBouttons{
-    width: 30vw;
+    width: 100vw;
+    height: 5vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #815355;
     
-    
-    button{
+    div{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        
     }
 }
