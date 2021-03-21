@@ -562,15 +562,15 @@ a:hover, a:active {
 }
 
 .site-title a {
-  color: #2fa151;
+  color: #BAD1CD;
 }
 
 .site-title a:visited {
-  color: #1f7438;
+  color: #407076;
 }
 
 .site-title a:hover, .site-title a:focus, .site-title a:active {
-  color: #7fa12f;
+  color: #5c8b79;
 }
 
 .site-title a:focus {
