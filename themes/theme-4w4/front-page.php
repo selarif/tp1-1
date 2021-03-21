@@ -26,8 +26,14 @@ get_header();
 						<!-- <img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"> -->
 						<img src="../../../../4w4/wp-content/uploads/impressionisme2.jpg" alt="Une peinture de Monet" id="image1">
 					</div>
-					<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"></div>
-					<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=location-marker&color=fff" width="32" height="32"></div>
+					<div>
+						<!-- <img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"> -->
+						<img src="../../../../4w4/wp-content/uploads/Impressionnisme1.jpg" alt="Une autre peinture de Monet" id="image2">
+					</div>
+					<div>
+						<!-- <img src="https://s2.svgbox.net/hero-solid.svg?ic=location-marker&color=fff" width="32" height="32"> -->
+						<img src="../../../../4w4/wp-content/uploads/impressionnisme4.jpg" alt="Encore une autre peinture de Monet" id="image3">
+					</div>
 				</section>
 		 <!-- ** Fin du carrousel -->		
 		<!--

@@ -1252,23 +1252,14 @@ body.home::after {
   align-items: center;
 }
 
-.carrousel div .icones {
-  color: white;
-}
-
-.carrousel div #image1 {
-  /* width: 100vw;
-            height: 100%;*/
-  max-width: 100%;
-  height: auto;
-}
-
-.carrousel div #image1:hover::after {
-  content: "Peinture de Monet";
-  color: white;
+.carrousel div #image1, .carrousel div #image2, .carrousel div #image3 {
+  width: 100vw;
+  height: 19vh;
+  object-fit: cover;
 }
 
 .carrousel div:nth-of-type(1) {
+  background-color: #d8a0a0;
   /*background-image: url("../../../../images/impressionisme2.jpg");*/
 }
 
