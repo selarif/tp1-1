@@ -4,7 +4,7 @@ body.home {
 
     width : 100vw;
     height : 100vh;
-    background-color: #F2D1C9;
+    background-color: $color__background-body1;
 
     // #primary est la section principale
     #primary{
@@ -25,12 +25,11 @@ body.home::after{
     right:0;
     clip-path: polygon(100% 46%, 50% 100%, 100% 100%);
     // clip-path: polygon(90% 100% , 100% 100% , 70% 100%);
-    background-color: #153B50;
+    background-color: $color__background-body1-clip-path ;
     z-index: -1;
 
     @include desktop{
         clip-path: polygon(90% 0 , 100% 0, 100% 100%, 70% 100%);
-        
     }
 }
 #page{
@@ -40,7 +39,7 @@ body.home::after{
 .page-title{ // TITRE ARCHIVES
     text-align: center;
     font-size: 4rem;
-    color: #153B50;
+    color: $color__page-title;
     z-index: -5;
     // L'animation
     animation-name: slider;
@@ -86,7 +85,7 @@ body.home::after{
         justify-content: center;
     
         article:hover{ // Quand on hover sur les cases de cours
-            background-color: #f5e6e2;
+            background-color: $color__list-cours-hover;
             color: #426A5A;
             box-shadow: none;
             a,h4{
@@ -100,7 +99,7 @@ body.home::after{
             justify-content: space-between;
             align-items: center; // aligner le contenu des cases au centre 
             width: 90%;
-            background-color: #426A5A;
+            background-color: $color__list-cours;
             border-radius : 40px;
             margin-left: 1rem;
             margin-right: 1rem;
