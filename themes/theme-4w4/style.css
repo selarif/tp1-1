@@ -833,19 +833,6 @@ menu tablet
 }
 
 /* ----------------------------------------------------------------------------------------------
-   LES ANIMATIONS
-------------------------------------------------------------------------------------------------- */
-@keyframes height {
-  0% {
-    height: 0px;
-    border-radius: 0 0 0 0;
-  }
-  100% {
-    height: 450px;
-  }
-}
-
-/* ----------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------- */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -1245,22 +1232,6 @@ body.home::after {
   margin-top: 0;
 }
 
-/* ----------------------------------------------------------------------------------------------
-   LES ANIMATIONS
-------------------------------------------------------------------------------------------------- */
-@keyframes slider {
-  0% {
-    transform: translateX(-100%);
-    animation-timing-function: cubic-bezier(0, 1.04, 0.72, 1.01);
-    text-shadow: none;
-  }
-  100% {
-    transform: translateX(0px);
-    animation-timing-function: cubic-bezier(1, 0, 1, 0.81);
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.45);
-  }
-}
-
 /* Local/carrousel
 --------------------------------------------- */
 .carrousel {
@@ -1447,5 +1418,33 @@ body.home::after {
 
 .fermeX3 {
   animation: fermeX3 0.5s both;
+}
+
+/* Local/animations
+--------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------
+   LES ANIMATIONS
+------------------------------------------------------------------------------------------------- */
+@keyframes slider {
+  0% {
+    transform: translateX(-100%);
+    animation-timing-function: cubic-bezier(0, 1.04, 0.72, 1.01);
+    text-shadow: none;
+  }
+  100% {
+    transform: translateX(0px);
+    animation-timing-function: cubic-bezier(1, 0, 1, 0.81);
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.45);
+  }
+}
+
+@keyframes height {
+  0% {
+    height: 0px;
+    border-radius: 0 0 0 0;
+  }
+  100% {
+    height: 450px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+/* ----------------------------------------------------------------------------------------------
+   LES ANIMATIONS
+------------------------------------------------------------------------------------------------- */
+// L'animation du titre Archives 
+@keyframes slider{
+    0%{
+        transform: translateX(-100%);
+        animation-timing-function: cubic-bezier(0,1.04,.72,1.01); 
+        text-shadow: none;
+    }
+    100%{ 
+        transform: translateX(0px);
+        animation-timing-function: cubic-bezier(1,0,1,.81);
+        text-shadow: 4px 4px 12px rgba(0,0,0,0.45);
+    }
+}
+  
+
+// L'animation du Drop-Down Menu
+@keyframes height{
+    0%{
+        height: 0px;
+        border-radius: 0 0 0 0;    
+	
+    }
+    100%{
+        height: 450px;
+    }
+}
+
