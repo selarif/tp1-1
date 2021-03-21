@@ -1252,6 +1252,7 @@ body.home::after {
   0% {
     transform: translateX(-100%);
     animation-timing-function: cubic-bezier(0, 1.04, 0.72, 1.01);
+    text-shadow: none;
   }
   100% {
     transform: translateX(0px);
@@ -1267,7 +1268,10 @@ body.home::after {
   width: 300vw;
   height: 20vh;
   transition: transform .5s;
-  border: 3px solid #d0ff00;
+  border-top: 4px solid #4B4753;
+  border-bottom: 4px solid #4B4753;
+  margin-bottom: 1rem;
+  box-shadow: -1px 32px 50px -48px rgba(0, 0, 0, 0.75);
 }
 
 .carrousel div {
