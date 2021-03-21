@@ -22,7 +22,10 @@ get_header();
 							<div>2</div> 
 							<div>3</div>	
 					-->
-					<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"></div>
+					<div>
+						<!-- <img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"> -->
+						<img src="../../../../4w4/wp-content/uploads/impressionisme2.jpg" alt="Une peinture de Monet" id="image1">
+					</div>
 					<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"></div>
 					<div><img src="https://s2.svgbox.net/hero-solid.svg?ic=location-marker&color=fff" width="32" height="32"></div>
 				</section>

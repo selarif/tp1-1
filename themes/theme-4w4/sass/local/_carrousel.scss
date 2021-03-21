@@ -21,10 +21,22 @@
         color: white;
         }
         
-
+        #image1{
+           /* width: 100vw;
+            height: 100%;*/
+            max-width: 100%;
+            height: auto; 
+           // image-resolution:;
+        }
+        #image1:hover::after{
+            content:"Peinture de Monet";
+            color: white;
+        }
     
         &:nth-of-type(1){
-            background-color: rgb(216, 160, 160);
+            //background-color: rgb(216, 160, 160);
+            /*background-image: url("../../../../images/impressionisme2.jpg");*/
+            
         }
         &:nth-of-type(2){
             background-color: rgb(136, 196, 101);
