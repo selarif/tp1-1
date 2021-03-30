@@ -1302,6 +1302,97 @@ body.home::after {
   justify-content: space-evenly;
 }
 
+/* Local/carrousel-2
+--------------------------------------------- */
+.carrousel-2 {
+  display: flex;
+  height: 20vh;
+  transition: transform .5s;
+  border-top: 4px solid #4B4753;
+  border-bottom: 4px solid #4B4753;
+  margin-bottom: 1rem;
+  box-shadow: -1px 32px 50px -48px rgba(0, 0, 0, 0.75);
+  flex-wrap: nowrap;
+  width: 6 00vw;
+}
+
+.carrousel-2 .slide__conteneur {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrousel-2 .slide__conteneur .slide {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(1) {
+  background-color: #d8a0a0;
+  /*background-image: url("../../../../images/impressionisme2.jpg");*/
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(2) {
+  background-color: #88c465;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(3) {
+  background-color: #e4d594;
+}
+
+.carrousel-2 .slide__conteneur .slide img {
+  display: block;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info p {
+  font-size: .8rem;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info a {
+  font-size: 1.5rem;
+}
+
+.LesBouttons input {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #BAD1CD;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.checkmark:hover {
+  background-color: #153B50;
+}
+
+.LesBouttons {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #775e88;
+}
+
+.LesBouttons div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* Local/burger
 --------------------------------------------- */
 /* -------------------------------
