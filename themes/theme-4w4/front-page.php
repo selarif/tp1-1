@@ -27,10 +27,6 @@ get_header();
 
 		 <!-- ** Début du carrousel -->
 				<section class="carrousel">
-					<!--	<div>1</div>
-							<div>2</div> 
-							<div>3</div>	
-					-->
 					<div>
 						<!-- <img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-right&color=fff" width="32" height="32"> -->
 						<img src="../../../../4w4/wp-content/uploads/impressionisme2.jpg" alt="Une peinture de Monet" id="image1">
@@ -151,10 +147,9 @@ get_footer();
 
 function convertir_tableau(&$tPropriété){
 	$titre_grand = get_the_title();
-
-	$tPropriété['session'];	// Tableau associatif
-	$tPropriété['nbHeure'] = $session = substr($titre_grand, 4,1); // ---4 : position du numéro. 1 : nombre de caractères
-	$tPropriété['nbHeure'] = substr($titre_grand, -4, 3 ); // ---on cherche le nombre d'heures
+	// Tableau associatif
+	$tPropriété['session'] = substr($titre_grand, 4,1);
+	$tPropriété['nbHeure'] = substr($titre_grand, -4, 3); // ---on cherche le nombre d'heures ---4 : position du numéro. 1 : nombre de caractères
 	$tPropriété['titre'] = substr($titre_grand, 8, -6); // ---on cherche le nom du cours et seulement ça, sans le sigle et nb d'heures
 	$tPropriété['sigle'] = substr($titre_grand, 0, 7);
 	$tPropriété['typeCours'] = get_field('type_de_cours'); 

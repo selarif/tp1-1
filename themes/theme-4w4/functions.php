@@ -219,7 +219,7 @@ function extraire_cours_front_page($query){
 		$query->set('order', 'orderby', array( 'meta_value' => 'DESC', 'title' => 'ASC' )); 
 	}
 }
-// ---Add action sert a ecouter les hooks. Un crochet qui se trouve a l'interieur de word press. Des qu'il en trouve un, il s'actif. 
-// ---Il sert a adapter la function de wordpress, en fonction de ou wp est rendu dans l'execution de son code
-// ---pre get post = avant d'extraire les articles
+// ---Add action sert à écouter les hooks. C'est un écouteur. Un crochet qui se trouve à l'intérieur de WordPress. Dès qu'il en trouve un, il s'active. 
+// ---Il sert à adapter la function de WordPress, en fonction de ou wp est rendu dans l'éxécution de son code
+// ---"pre get post" = "avant d'extraire les articles"
 add_action('pre_get_posts','extraire_cours_front_page');
