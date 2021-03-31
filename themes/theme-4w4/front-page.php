@@ -133,7 +133,7 @@ get_header();
 							endif;
 							$precedent =  $tPropriété['typeCours'];
 
-				//endwhile;?>
+				 endwhile;?>
 						</section>
 		<?php endif;  //fin have_posts?>
 
